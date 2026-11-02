@@ -1,0 +1,11 @@
+[04.11.2026 01:00:00] <01> Info     Job [ERP-Backup] started. Session id: 51ae09b3
+[04.11.2026 01:00:01] <01> Info     Processing VM: ERP-DB01 (vm-4502)
+[04.11.2026 01:00:03] <09> Info     Creating VM snapshot
+[04.11.2026 01:00:03] <09> Warning  VM ERP-DB01 has 4 existing snapshots, oldest created 41 days ago (Veeam Temporary Snapshot)
+[04.11.2026 01:00:04] <09> Warning  Datastore DS-PROD-02 free space is 3.1% (62 GB of 2.0 TB)
+[04.11.2026 01:05:04] <09> Error    Failed to create VM snapshot. Error: An error occurred while saving the snapshot: Timeout
+[04.11.2026 01:05:04] <09> Error    Task 'Create virtual machine snapshot' failed on host esxi03.corp.local
+[04.11.2026 01:05:34] <01> Info     Retrying VM processing (attempt 1 of 3)
+[04.11.2026 01:10:35] <09> Error    Failed to create VM snapshot. Error: An error occurred while saving the snapshot: Timeout
+[04.11.2026 01:10:36] <01> Error    VM ERP-DB01 processing failed
+[04.11.2026 01:10:37] <01> Info     Job [ERP-Backup] finished with Failed. Success: 0, Warning: 0, Failed: 1

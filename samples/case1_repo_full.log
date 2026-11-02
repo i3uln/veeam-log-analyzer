@@ -1,0 +1,15 @@
+[03.11.2026 22:00:01] <01> Info     Job [File-Server-Backup] started. Session id: 2b81c7e4
+[03.11.2026 22:00:02] <01> Info     Checking repository REPO-LOCAL01 (D:\Backups) free space: 412.6 GB
+[03.11.2026 22:00:02] <01> Warning  Repository REPO-LOCAL01 is getting low on free space (412.6 GB left, 5% of 8.0 TB)
+[03.11.2026 22:00:03] <01> Info     Processing VM: FS01 (vm-2207)
+[03.11.2026 22:00:05] <07> Info     Using backup proxy VBR01 for disk Hard disk 1 [hotadd]
+[03.11.2026 22:00:05] <07> Info     Using backup proxy VBR01 for disk Hard disk 2 [hotadd]
+[03.11.2026 22:01:10] <07> Info     Hard disk 1 (100 GB) 3.2 GB read at 180 MB/s [CBT]
+[03.11.2026 22:01:11] <07> Warning  CBT data is invalid for Hard disk 2, failing over to full disk scan
+[03.11.2026 22:52:40] <07> Info     Hard disk 2 (2.0 TB) 1.6 TB read at 560 MB/s
+[03.11.2026 22:52:41] <07> Info     Transferred 418.3 GB (compression 1.0x, dedupe 1.0x)
+[03.11.2026 22:52:41] <07> Error    Failed to write data to file D:\Backups\File-Server-Backup\FS01.vib
+[03.11.2026 22:52:41] <07> Error    There is not enough space on the disk. (Win32 error 112)
+[03.11.2026 22:52:42] <01> Error    VM FS01 processing failed
+[03.11.2026 22:52:43] <01> Info     Removing VM snapshot
+[03.11.2026 22:52:50] <01> Info     Job [File-Server-Backup] finished with Failed. Success: 0, Warning: 0, Failed: 1

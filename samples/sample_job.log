@@ -1,0 +1,21 @@
+[02.11.2026 01:00:02] <01> Info     Job [Daily-VM-Backup] started. Session id: 7f3c2a10
+[02.11.2026 01:00:03] <01> Info     Processing VM: WEB01 (vm-1021)
+[02.11.2026 01:00:05] <07> Info     Using backup proxy PROXY01 for disk Hard disk 1 [hotadd]
+[02.11.2026 01:00:41] <07> Info     Hard disk 1 (80 GB) 12.4 GB read at 210 MB/s [CBT]
+[02.11.2026 01:01:12] <01> Info     VM WEB01 processed successfully
+[02.11.2026 01:01:13] <01> Info     Processing VM: DB01 (vm-1034)
+[02.11.2026 01:01:15] <09> Info     Creating VM snapshot
+[02.11.2026 01:01:45] <09> Warning  Failed to quiesce guest OS, retrying with crash-consistent snapshot
+[02.11.2026 01:01:45] <09> Warning  Error: VSS writer 'SqlServerWriter' is in failed state (0x800423f4)
+[02.11.2026 01:02:10] <09> Info     Snapshot created (crash-consistent)
+[02.11.2026 01:02:12] <11> Info     Using backup proxy PROXY01 for disk Hard disk 1 [nbd]
+[02.11.2026 01:02:12] <11> Warning  Unable to hot add disk, falling back to network mode
+[02.11.2026 01:15:40] <11> Info     Hard disk 1 (500 GB) 88.1 GB read at 112 MB/s [CBT]
+[02.11.2026 01:15:41] <11> Error    Failed to write data to repository REPO-NAS01: The network path was not found
+[02.11.2026 01:15:41] <11> Error    Exception: Cannot access \\nas01\veeam\Daily-VM-Backup\DB01.vbk
+[02.11.2026 01:16:11] <11> Info     Retrying in 30 seconds (attempt 1 of 3)
+[02.11.2026 01:16:41] <11> Error    Failed to write data to repository REPO-NAS01: The network path was not found
+[02.11.2026 01:17:11] <11> Error    Failed to write data to repository REPO-NAS01: The network path was not found
+[02.11.2026 01:17:12] <01> Error    VM DB01 processing failed
+[02.11.2026 01:17:13] <01> Info     Removing VM snapshot
+[02.11.2026 01:17:20] <01> Info     Job [Daily-VM-Backup] finished with Failed. Success: 1, Warning: 0, Failed: 1
